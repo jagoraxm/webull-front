@@ -9,21 +9,19 @@ function App() {
   const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2MTk3NDQ4LCJpYXQiOjE3MjYxMTEwNDgsImp0aSI6Ijg0MmRmNGYwMTYyNzQ5OWQ4MDQwYzFkOGE3OTg4NzRkIiwidXNlcl9pZCI6MX0.-XJtx91QYQY6Zq-52AHAqJAMFfNRNXuwn-0Te1qv1I4";
   const [get, setGet] = useState(null);
 
-  const prepareDataChart = () =>{
-    console.log();
-  }
-
-  useEffect (() => {
-    
-    axios.get(baseURL,{
+  const prepareDataChart = async () =>{
+    await axios.get(baseURL,{
       headers: {
         'Authorization': `Bearer ${token}`
       }
     }).then((response) => {
       console.log(response.data);
     });
+  }
+
+  useEffect (() => {
     
-    if (!get) return null;
+    // if (!get) return null;
 
     prepareDataChart()
 
