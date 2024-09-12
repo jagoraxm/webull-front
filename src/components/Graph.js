@@ -10,6 +10,8 @@ import  {
     Legend
 } from 'chart.js/auto'
 
+import {lineChartData} from '../fake_data'
+
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -20,7 +22,7 @@ ChartJS.register(
     Legend
 )
 
-export const Graph = (lineChartData) => {
+export const Graph = () => {
 
     const option = {}
 

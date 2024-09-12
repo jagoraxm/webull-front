@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Graph } from "./components/Graph";
-import { lineChartData } from "./fake_data";
+//import { lineChartData } from "./fake_data";
 import axios from "axios";
 
 function App() {
@@ -10,9 +10,9 @@ function App() {
   const [get, setGet] = useState(null);
 
   const prepareDataChart = () =>{
-    console.log(get);
+    console.log();
   }
-  
+
   useEffect (() => {
     
     axios.get(baseURL,{
@@ -20,7 +20,7 @@ function App() {
         'Authorization': `Bearer ${token}`
       }
     }).then((response) => {
-      setGet(response.data);
+      console.log(response.data);
     });
     
     if (!get) return null;
@@ -31,7 +31,7 @@ function App() {
 
 
   return (
-    <div class="container mx-auto px-4 pt-10">
+    <div className="container mx-auto px-4 pt-10">
       <form>
         <div className="border-b border-gray-900/10 pb-12">
             <h2 className="text-base font-semibold leading-7 text-gray-900">Prueba Técnica</h2>
@@ -97,7 +97,7 @@ function App() {
         </div>
       </form>
 
-      <Graph lineChartData={lineChartData} />
+      <Graph />
     </div>
   );
 }
