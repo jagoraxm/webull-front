@@ -15,7 +15,8 @@ function App() {
       maxBodyLength: Infinity,
       url: baseURL,
       headers: { 
-        'Authorization': `Bearer ${token}`
+        'Authorization': `Bearer ${token}`,
+        'Access-Control-Allow-Origin': '*'
       },
       //data : data
     };
