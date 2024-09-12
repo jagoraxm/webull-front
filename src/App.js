@@ -27,7 +27,7 @@ function App() {
 
     prepareDataChart()
 
-  }  , []);
+  }  , [get]);
 
 
   return (
