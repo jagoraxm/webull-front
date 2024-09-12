@@ -5,7 +5,7 @@ import axios from "axios";
 
 function App() {
   
-  const baseURL = 'https://webull-api-production.up.railway.app/api/companies/07634a73-0302-40ea-8d6c-3b506b50d483';
+  const baseURL = 'https://webull-api-production.up.railway.app/api/companies/07634a73-0302-40ea-8d6c-3b506b50d483/';
   const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2MTk3NDQ4LCJpYXQiOjE3MjYxMTEwNDgsImp0aSI6Ijg0MmRmNGYwMTYyNzQ5OWQ4MDQwYzFkOGE3OTg4NzRkIiwidXNlcl9pZCI6MX0.-XJtx91QYQY6Zq-52AHAqJAMFfNRNXuwn-0Te1qv1I4";
   const [get, setGet] = useState(null);
 
